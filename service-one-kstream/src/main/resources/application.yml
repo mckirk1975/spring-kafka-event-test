@@ -1,0 +1,17 @@
+
+spring:
+  cloud:
+    function:
+      definition: topicOne;topicTwo
+    stream:
+      bindings:
+        topicOne-in-0:
+          destination: input.topic
+        topicTwo-out-0:
+          destination: output.topic
+      kafka:
+        streams:
+          bindings:
+            topicOne-in-0:
+              consumer:
+                valueSerde: com.saturnitservices.eventframework.serviceonekstream.serde.ServiceOneDataSerde

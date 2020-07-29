@@ -1,0 +1,17 @@
+
+spring:
+  cloud:
+    function:
+      definition: topicOne;topicTwo;gather
+    stream:
+      bindings:
+        topicOne-in-0:
+          destination: topic-one
+        topicTwo-out-0:
+          destination: topic-two
+        gather-in-0:
+          destination: gatherLeft
+        gather-in-1:
+          destination: gatherRight
+        gather-out-0:
+          destination: gatherStereo

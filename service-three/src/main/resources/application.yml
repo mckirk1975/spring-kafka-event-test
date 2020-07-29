@@ -1,0 +1,11 @@
+
+spring:
+  cloud:
+    function:
+      definition: topicThree;topicOne
+    stream:
+      bindings:
+        topicThree-in-0:
+          destination: topic-three
+        topicOne-out-0:
+          destination: topic-one
